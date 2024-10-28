@@ -1,0 +1,135 @@
+/* Resetting default styling */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #8CCBE0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0CABE0;
+    padding: 15px 20px;
+}
+
+.logo img {
+    padding-left: 30px;
+    width: 30%;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Aligns the list items vertically */
+}
+
+.nav-links li {
+    position: relative; /* Key to position the submenu */
+    margin-left: 20px; /* Space between links */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #575757; /* Change background on hover */
+}
+
+.button {
+    background-color: #8CCBE0;
+    height: 4vh;
+    width: 10vw;
+    color: white;
+    border-color: transparent;
+}
+
+/* Submenu styling */
+#menuList {
+    list-style-type: none;
+    padding: 0; /* Remove padding around submenu */
+    margin: 0;
+    background-color: #0CABE0;
+    width: 200px;
+    position: absolute;
+    top: 100%; /* Position the submenu below the parent item */
+    left: 0;
+    opacity: 0;
+    visibility: hidden; /* Hide it from view */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+/* Show #menuList when hovering over .view */
+.view:hover + #menuList, 
+.view:hover #menuList {
+    opacity: 1; /* Makes the menu visible */
+    visibility: visible;
+}
+
+#menuList li {
+    padding: 10px 0; /* Space around the submenu links */
+}
+
+#menuList a {
+    display: block; /* Makes the entire area of the link clickable */
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#menuList a:hover {
+    background-color: #575757; /* Highlight submenu items on hover */
+}
+.QR-present-containers{
+    display: flex;
+    flex-direction:row;
+}
+.qr-container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    /* max-width: 300px; */
+    margin: 40px;
+    height: 60vh;
+    width: 20vw;
+    margin-left: 15%;
+    
+  }
+  
+  .qr-code {
+    width: 50vw;
+    height: 40vh;
+    max-width: 200px;
+    margin-bottom: 10px;
+  }
+  .presentview-container{
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    /* max-width: 300px; */
+    margin: 40px;
+    height: 60vh;
+    width: 20vw;
+    margin-left: 25%;
+    
+  }
